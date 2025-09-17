@@ -4,9 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Este programita sirve para ver que numeros primos tenemos en una lista
+
 // Prototipo
 bool isprime(unsigned num);
 
+// Un input que solo acepta numeros
 int main(int argc, char *argv[])
 {
     if (argc < 2)
@@ -14,6 +17,7 @@ int main(int argc, char *argv[])
         printf("¿Eso que? Dame numeros, papito. \nUso: ./primosenarreglo num1 num2 num3 ...");
         return 1;
     }
+    // Imprime la lista de los numeros que sí son primos
     printf("De tu lista, estos numeros son primos: ");
     for (int i = 1; i < argc; i++)
     {
@@ -26,7 +30,7 @@ int main(int argc, char *argv[])
     printf("\n");
     return 0;
 }
-
+// Le regresa solo numeros primos al printf
 bool isprime(unsigned num)
 {
     if (num < 2)
